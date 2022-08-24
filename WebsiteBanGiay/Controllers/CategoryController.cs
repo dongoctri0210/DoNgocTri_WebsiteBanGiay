@@ -10,7 +10,7 @@ namespace WebsiteBanGiay.Controllers
 {
     public class CategoryController : Controller
     {
-        WebsiteBanGiayEntities3 ojbWebsiteBanGiayEntities = new WebsiteBanGiayEntities3();
+        WebsiteBanGiayEntities ojbWebsiteBanGiayEntities = new WebsiteBanGiayEntities();
         // GET: Category
         public ActionResult Index()
         {

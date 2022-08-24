@@ -9,7 +9,7 @@ namespace WebsiteBanGiay.Controllers
 {
     public class ProductController : Controller
     {
-        WebsiteBanGiayEntities3 ojbWebsiteBanGiayEntities = new WebsiteBanGiayEntities3();
+        WebsiteBanGiayEntities ojbWebsiteBanGiayEntities = new WebsiteBanGiayEntities();
         // GET: Product
         public ActionResult Detail( int ID)
         {

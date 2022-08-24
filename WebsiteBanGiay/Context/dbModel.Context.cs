@@ -13,10 +13,10 @@ namespace WebsiteBanGiay.Context
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class WebsiteBanGiayEntities3 : DbContext
+    public partial class WebsiteBanGiayEntities : DbContext
     {
-        public WebsiteBanGiayEntities3()
-            : base("name=WebsiteBanGiayEntities3")
+        public WebsiteBanGiayEntities()
+            : base("name=WebsiteBanGiayEntities")
         {
         }
     
@@ -27,6 +27,8 @@ namespace WebsiteBanGiay.Context
     
         public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }

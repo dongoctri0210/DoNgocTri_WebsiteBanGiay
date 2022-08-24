@@ -1,0 +1,83 @@
+﻿@model WebsiteBanGiay.Context.Category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+
+    <!-- Main content -->
+    <section class="content my-3">
+
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong>CHI TIẾT LOẠI SẢN PHẨM</strong>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <i class="fas fa-edit"></i>@Html.ActionLink("Sửa", "Edit", new { id = Model.Id }) |
+                        <i class="fas fa-undo"></i>@Html.ActionLink("Quay về", "Index")
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Avatar)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Avatar)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Slug)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Slug)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ShowOnHomePage)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ShowOnHomePage)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DisplayOrder)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.DisplayOrder)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- /.card-body -->
+
+        </div>
+        <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+

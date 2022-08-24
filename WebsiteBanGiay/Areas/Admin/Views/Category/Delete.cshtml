@@ -1,0 +1,100 @@
+﻿@model WebsiteBanGiay.Context.Category
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+
+
+    <!-- Main content -->
+    <section class="content my-3">
+
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-body">
+                <div>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Avatar)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Avatar)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Slug)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Slug)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.ShowOnHomePage)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.ShowOnHomePage)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.DisplayOrder)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.DisplayOrder)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Deleted)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Deleted)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.CreatedOnUtc)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.CreatedOnUtc)
+                        </dd>
+                    </dl>
+
+                    <h4>Bạn có muốn xóa loại sản phẩm này không?</h4>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Xóa" class="btn btn-sm btn-danger" /> |
+                            <i class="fas fa-undo"></i>@Html.ActionLink("Quay về", "Index")
+                        </div>
+                    }
+                </div>
+            </div>
+            <!-- /.card-body -->
+
+        </div>
+        <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+

@@ -1,4 +1,4 @@
-﻿@model WebsiteBanGiay.Models.CategoryModel
+﻿@model List<WebsiteBanGiay.Context.Category>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,7 +10,7 @@
     <div class="container">
 
         <nav class="row">
-            @foreach (var item in Model.ListCategory)
+            @foreach (var item in Model)
             {
                 <div class="col-md-3">
 
@@ -19,8 +19,7 @@
                             <img src="~/Content/images/category/@item.Avatar">
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title"><a href="#">@item.Name</a></h4>
-                            
+                            <h4 class="card-title"><a href="@Url.Action("ProductCategory","Category",new { ID = item.Id})">@item.Name</a></h4>                            
                         </div>
                     </div>
                 </div> <!-- col.// -->

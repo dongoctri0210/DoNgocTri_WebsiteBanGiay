@@ -17,8 +17,7 @@ namespace WebsiteBanGiay.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new {Controller="HomeAdmin", action = "Index", id = UrlParameter.Optional },
-                new[] { "WebsiteBanGiay.Areas.Admin.Controllers" }
+                new { action = "Index", id = UrlParameter.Optional }
             );
         }
     }
