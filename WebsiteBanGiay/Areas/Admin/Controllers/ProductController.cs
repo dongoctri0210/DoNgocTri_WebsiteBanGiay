@@ -71,7 +71,7 @@ namespace WebsiteBanGiay.Areas.Admin.Controllers
                         string extension = Path.GetExtension(objproduct.ImageUpload.FileName);
                         fileName = fileName + extension;
                         objproduct.Avatar = fileName;
-                        objproduct.ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Content/images/items/"), fileName));
+                        objproduct.ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Content/images/items"), fileName));
                     }
                     objproduct.CreatedDate = DateTime.Now;
                     ojbWebsiteBanGiayEntities.SanPhams.Add(objproduct);
@@ -85,7 +85,7 @@ namespace WebsiteBanGiay.Areas.Admin.Controllers
             }
             return View(objproduct);
         }
-       void LoadData()
+        void LoadData()
         {
             Common objcommon = new Common();
             //Lấy dữ liệu danh mục từ DB

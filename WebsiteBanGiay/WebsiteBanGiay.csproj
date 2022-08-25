@@ -2148,6 +2148,7 @@
     <Content Include="Content\images\icons\pay-mastercard.png" />
     <Content Include="Content\images\icons\pay-visa-el.png" />
     <Content Include="Content\images\icons\pay-visa.png" />
+    <Content Include="Content\images\items\avt.jpg" />
     <Content Include="Content\images\items\demoDH1.jpg" />
     <Content Include="Content\images\items\demoDH2.jpg" />
     <Content Include="Content\images\items\demoDH3.png" />
