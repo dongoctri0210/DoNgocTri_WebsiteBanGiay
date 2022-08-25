@@ -71,7 +71,7 @@ namespace WebsiteBanGiay.Areas.Admin.Controllers
                         string extension = Path.GetExtension(objproduct.ImageUpload.FileName);
                         fileName = fileName + extension;
                         objproduct.Avatar = fileName;
-                        objproduct.ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Content/images/"), fileName));
+                        objproduct.ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Content/images/items/"), fileName));
                     }
                     objproduct.CreatedDate = DateTime.Now;
                     ojbWebsiteBanGiayEntities.SanPhams.Add(objproduct);
@@ -150,7 +150,7 @@ namespace WebsiteBanGiay.Areas.Admin.Controllers
                         string extension = Path.GetExtension(objProduct.ImageUpload.FileName);
                         fileName = fileName + extension;
                         objProduct.Avatar = fileName;
-                        objProduct.ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Content/images/"), fileName));
+                        objProduct.ImageUpload.SaveAs(Path.Combine(Server.MapPath("~/Content/images/items/"), fileName));
                     }
                     objProduct.CreatedDate = DateTime.Now;
                     ojbWebsiteBanGiayEntities.SanPhams.Add(objProduct);
